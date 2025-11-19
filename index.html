@@ -4,33 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neil Armstrong | CS Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Neil Armstrong</h1>
-        <p>Computer Science Student</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300">
+    <header class="bg-gray-800 text-white p-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Neil Armstrong</h1>
+        <nav class="space-x-4">
+            <a href="#home" class="hover:text-blue-400">Home</a>
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#projects" class="hover:text-blue-400">Projects</a>
+            <a href="#contact" class="hover:text-blue-400">Contact</a>
         </nav>
+        <button id="darkModeToggle" class="ml-4 bg-blue-500 text-white px-3 py-1 rounded">Dark Mode</button>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I’m Neil, a Computer Science student passionate about technology and learning new skills. Currently exploring web development and software engineering.</p>
+    <section id="home" class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+        <p class="text-lg">Computer Science Student | Future Developer</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>No projects yet — stay tuned!</p>
+    <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+        <p class="text-lg leading-relaxed text-center">Hello! I’m Neil, a Computer Science student passionate about technology and learning new skills. Currently exploring web development and software engineering.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:neilarmstrong1@yahoo.com">neilarmstrong1@yahoo.com</a></p>
+    <section id="projects" class="bg-gray-200 py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+            <p class="text-center text-lg">No projects yet — stay tuned!</p>
+        </div>
     </section>
+
+    <section id="contact" class="max-w-4xl mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2>
+        <p class="text-center text-lg">Email: <a href="mailto:neilarmstrong1@yahoo.com" class="text-blue-600 hover:underline">neilarmstrong1@yahoo.com</a></p>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 Neil Armstrong. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

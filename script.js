@@ -1,2 +1,3 @@
-// Placeholder for future interactivity
-console.log('Portfolio site loaded successfully');
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
