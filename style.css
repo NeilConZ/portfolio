@@ -2,19 +2,23 @@ html {
     scroll-behavior: smooth;
 }
 .dark-mode, body.dark-mode {
-    background-color: #1a202c;
-    color: #f7fafc;
+    --bg-dark: #071428; /* deep navy */
+    --panel-dark: rgba(255,255,255,0.03);
+    --muted-dark: #9aa7b8;
+    --accent: #5eead4; /* teal-cyan accent */
+    background-color: var(--bg-dark);
+    color: #e6eef6;
 }
 
 /* Override commonly used Tailwind utility classes when dark mode is enabled */
-body.dark-mode .bg-gray-100 { background-color: #1a202c !important; }
-body.dark-mode .text-gray-900 { color: #f7fafc !important; }
-body.dark-mode .bg-gray-200 { background-color: #2d3748 !important; }
-body.dark-mode .bg-gray-800 { background-color: #2d3748 !important; }
-body.dark-mode header, body.dark-mode footer { background-color: #2d3748 !important; color: #f7fafc !important; }
-body.dark-mode a { color: #63b3ed !important; }
-/* Preserve hero gradient but make sure text stays readable */
-body.dark-mode .bg-gradient-to-r.from-blue-500.to-purple-600 { background-image: linear-gradient(90deg,#2b6cb0,#6b46c1) !important; }
+body.dark-mode .bg-gray-100 { background-color: var(--bg-dark) !important; }
+body.dark-mode .text-gray-900 { color: #e6eef6 !important; }
+body.dark-mode .bg-gray-200 { background-color: rgba(255,255,255,0.02) !important; }
+body.dark-mode .bg-gray-800 { background-color: #0b1220 !important; }
+body.dark-mode header, body.dark-mode footer { background-color: #071428 !important; color: #e6eef6 !important; }
+body.dark-mode a { color: var(--accent) !important; }
+/* Preserve hero gradient but make it deeper and richer */
+body.dark-mode .bg-gradient-to-r.from-blue-500.to-purple-600 { background-image: linear-gradient(90deg,#0f3460,#3b185f) !important; }
 
 /* Profile photo (circular) */
 .profile-photo {
@@ -30,5 +34,58 @@ body.dark-mode .bg-gradient-to-r.from-blue-500.to-purple-600 { background-image:
 }
 
 body.dark-mode .profile-photo {
-    border-color: #2d3748 !important;
+    border-color: rgba(255,255,255,0.06) !important;
+}
+
+/* Global typography */
+:root{
+    --bg: #f7fafc;
+    --muted: #6b7280;
+}
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background-color: var(--bg);
+}
+
+/* Cards used in projects */
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(15,23,42,0.12);
+}
+
+/* Dark mode card styles (richer, translucent with subtle border) */
+body.dark-mode .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+body.dark-mode .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.7);
+}
+
+/* Dark mode link hover */
+body.dark-mode a:hover { color: #34d399 !important; }
+
+/* Dark mode prose */
+body.dark-mode .prose p{color:var(--muted-dark)}
+
+/* Hero ring in dark mode - brighter rim */
+body.dark-mode .ring-4{box-shadow:0 0 0 8px rgba(94,234,212,0.06)}
+
+/* subtle prose sizing for about text */
+.prose p{font-size:1.05rem;color:var(--muted)}
+
+/* Hero image ring adjustments in dark mode */
+body.dark-mode .ring-4{box-shadow:0 0 0 8px rgba(45,55,72,0.6)}
+
+/* Responsive tweaks */
+@media (max-width: 640px){
+    .profile-photo{width:6rem;height:6rem}
 }

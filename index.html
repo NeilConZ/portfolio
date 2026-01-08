@@ -3,47 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neil Armstrong — Computer Science student portfolio showcasing projects and skills.">
     <title>Neil Armstrong | CS Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-100 text-gray-900 transition-colors duration-300">
-    <header class="bg-gray-800 text-white p-6 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Neil Armstrong</h1>
-        <nav class="space-x-4">
-            <a href="#home" class="hover:text-blue-400">Home</a>
-            <a href="#about" class="hover:text-blue-400">About</a>
-            <a href="#projects" class="hover:text-blue-400">Projects</a>
-            <a href="#contact" class="hover:text-blue-400">Contact</a>
-        </nav>
-        <button id="darkModeToggle" class="ml-4 bg-blue-500 text-white px-3 py-1 rounded">Dark Mode</button>
+    <header class="bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="assets/me.jpg" alt="Neil" class="w-10 h-10 rounded-full object-cover border-2 border-white">
+                <h1 class="text-xl font-semibold">Neil Armstrong</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+                <a href="#home" class="hover:text-blue-300">Home</a>
+                <a href="#about" class="hover:text-blue-300">About</a>
+                <a href="#projects" class="hover:text-blue-300">Projects</a>
+                <a href="#contact" class="hover:text-blue-300">Contact</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button id="darkModeToggle" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-sm transition">Toggle Theme</button>
+                <a href="#contact" class="hidden sm:inline-block bg-white text-gray-900 px-3 py-1 rounded-md text-sm font-medium hover:opacity-90">Get in touch</a>
+            </div>
+        </div>
     </header>
 
-    <section id="home" class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-        <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
-        <p class="text-lg">Current Computer Science Student | Future Software Developer</p>
+    <section id="home" class="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">I'm Neil - A Computer Science Student</h2>
+                <p class="text-lg md:text-xl mb-6">I build small web apps, learn new technologies, and work on projects that solve problems. Currently exploring full-stack development and software engineering practices.</p>
+                <div class="flex gap-3">
+                    <a href="#projects" class="bg-white text-gray-900 px-4 py-2 rounded-md font-medium hover:opacity-95">View Projects</a>
+                    <a href="#contact" class="border border-white px-4 py-2 rounded-md hover:bg-white/10">Contact Me</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="assets/me.jpg" alt="Neil Armstrong" class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover ring-4 ring-white shadow-xl">
+            </div>
+        </div>
     </section>
 
     <section id="about" class="max-w-4xl mx-auto py-16 px-4">
-        <img src="assets/me.jpg" alt="Neil Armstrong" class="profile-photo">
         <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-        <p class="text-lg leading-relaxed text-center">Hello! I’m Neil, a Computer Science student passionate about technology and learning new skills. Currently exploring web development and software engineering.</p>
+        <div class="prose mx-auto text-center">
+            <p class="text-lg leading-relaxed">Hello! I’m Neil, A Computer Science student passionate about technology and learning new skills. I enjoy building web experiences, automating tasks, and sharing what I learn. This site is a snapshot of my work and interests.</p>
+        </div>
     </section>
 
     <section id="projects" class="bg-gray-200 py-16">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-            <p class="text-center text-lg">No projects yet — stay tuned!</p>
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="card bg-white rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold mb-2">Project One</h3>
+                    <p class="text-sm text-gray-600 mb-3">A short description of a project — what it does and what technologies were used.</p>
+                    <div class="mt-auto">
+                        <a href="#" class="text-sm text-blue-600 hover:underline">View details →</a>
+                    </div>
+                </article>
+                <article class="card bg-white rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold mb-2">Project Two</h3>
+                    <p class="text-sm text-gray-600 mb-3">A short description of another small project or learning exercise.</p>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">View details →</a>
+                </article>
+                <article class="card bg-white rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold mb-2">Project Three</h3>
+                    <p class="text-sm text-gray-600 mb-3">A placeholder project card to show layout and visual design.</p>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">View details →</a>
+                </article>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="max-w-4xl mx-auto py-16 px-4">
         <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2>
-        <p class="text-center text-lg">Email: <a href="mailto:neilarmstrong1@yahoo.com" class="text-blue-600 hover:underline">neilarmstrong1@yahoo.com</a></p>
+        <div class="max-w-xl mx-auto bg-white rounded-lg shadow-md p-6 text-center">
+            <p class="mb-4">Have a question or want to work together? Send me an email and I'll get back to you.</p>
+            <a href="mailto:neilarmstrong1@yahoo.com" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md">Email me</a>
+        </div>
     </section>
 
-    <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Neil Armstrong. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm">&copy; 2025 Neil Armstrong. All rights reserved.</p>
+            <div class="flex gap-3">
+                <a href="#" aria-label="GitHub" class="hover:opacity-80">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="text-white"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.2 9.14 7.64 10.62.56.1.77-.24.77-.54 0-.27-.01-1-.02-1.96-3.11.68-3.77-1.5-3.77-1.5-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 . way"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/neil-armstrong-a82a86272/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:opacity-80">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="text-white"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h4.78v2.2h.07c.67-1.27 2.3-2.6 4.73-2.6C22.4 7.6 24 10.03 24 14.03V24h-5V14.9c0-2.15-.04-4.91-3-4.91-3 0-3.46 2.34-3.46 4.76V24H8V8z"/></svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
